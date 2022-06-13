@@ -20,7 +20,7 @@ export default{
 
 <template>
   <div class="hero h-[100vh] 
-    bg-[url('/src/images/hero/1.jpg')] bg-cover bg-center text-white "
+    bg-[url('./images/hero/1.jpg')] bg-cover bg-center text-white "
     :class=" 'bg' "
   >
     <div class="bg-black w-full 
