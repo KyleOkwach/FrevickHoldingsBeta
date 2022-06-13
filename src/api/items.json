@@ -1,0 +1,44 @@
+[
+    {
+        "name" : "Item 1",
+        "price" : 0,
+        "category" : "Furniture",
+        "link" : "#item",
+        "image" : "src/images/0001.jpeg"
+    },
+    {
+        "name" : "Item 2",
+        "price" : 0,
+        "category" : "Furniture",
+        "link" : "#item",
+        "image" : "src/images/0002.jpeg"
+    },
+    {
+        "name" : "Item 3",
+        "price" : 0,
+        "category" : "Furniture",
+        "link" : "#item",
+        "image" : "src/images/0003.jpeg"
+    },
+    {
+        "name" : "Item 4",
+        "price" : 0,
+        "category" : "Furniture",
+        "link" : "#item",
+        "image" : "src/images/0004.jpeg"
+    },
+    {
+        "name" : "Item 5",
+        "price" : 0,
+        "category" : "Furniture",
+        "link" : "#item",
+        "image" : "src/images/0005.jpeg"
+    },
+    {
+        "name" : "Item 6",
+        "price" : 0,
+        "category" : "Furniture",
+        "link" : "#item",
+        "image" : "src/images/0006.jpeg"
+    }
+]
