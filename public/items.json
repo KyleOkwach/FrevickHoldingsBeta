@@ -5,7 +5,7 @@
         "price" : 0,
         "category" : "Furniture",
         "link" : "#item",
-        "image" : "src/images/0001.jpeg"
+        "image" : "/images/0001.jpeg"
     },
     {
         "name" : "Nike Air force 1",
@@ -13,7 +13,7 @@
         "price" : 0,
         "category" : "Furniture",
         "link" : "#item",
-        "image" : "src/images/0002.jpeg"
+        "image" : "/images/0002.jpeg"
     },
     {
         "name" : "Patterned Cushion",
@@ -21,7 +21,7 @@
         "price" : 0,
         "category" : "Furniture",
         "link" : "#item",
-        "image" : "src/images/0003.jpeg"
+        "image" : "/images/0003.jpeg"
     },
     {
         "name" : "Patterned Cushion",
@@ -29,7 +29,7 @@
         "price" : 0,
         "category" : "Furniture",
         "link" : "#item",
-        "image" : "src/images/0004.jpeg"
+        "image" : "/images/0004.jpeg"
     },
     {
         "name" : "Lion Cushion",
@@ -37,111 +37,111 @@
         "price" : 0,
         "category" : "Furniture",
         "link" : "#item",
-        "image" : "src/images/0005.jpeg"
+        "image" : "/images/0005.jpeg"
     },
     {
         "name" : "Item 6",
         "price" : 0,
         "category" : "Furniture",
         "link" : "#item",
-        "image" : "src/images/0006.jpeg"
+        "image" : "/images/0006.jpeg"
     },
     {
         "name" : "Item 7",
         "price" : 0,
         "category" : "Furniture",
         "link" : "#item",
-        "image" : "src/images/0007.jpeg"
+        "image" : "/images/0007.jpeg"
     },
     {
         "name" : "Item 8",
         "price" : 0,
         "category" : "Furniture",
         "link" : "#item",
-        "image" : "src/images/0008.jpeg"
+        "image" : "/images/0008.jpeg"
     },
     {
         "name" : "Item 9",
         "price" : 0,
         "category" : "Furniture",
         "link" : "#item",
-        "image" : "src/images/0009.jpeg"
+        "image" : "/images/0009.jpeg"
     },
     {
         "name" : "Item 10",
         "price" : 0,
         "category" : "Furniture",
         "link" : "#item",
-        "image" : "src/images/0010.jpeg"
+        "image" : "/images/0010.jpeg"
     },
     {
         "name" : "Item 11",
         "price" : 0,
         "category" : "Furniture",
         "link" : "#item",
-        "image" : "src/images/0011.jpeg"
+        "image" : "/images/0011.jpeg"
     },
     {
         "name" : "Item 12",
         "price" : 0,
         "category" : "Furniture",
         "link" : "#item",
-        "image" : "src/images/0012.jpeg"
+        "image" : "/images/0012.jpeg"
     },
     {
         "name" : "Item 13",
         "price" : 0,
         "category" : "Furniture",
         "link" : "#item",
-        "image" : "src/images/0013.jpeg"
+        "image" : "/images/0013.jpeg"
     },
     {
         "name" : "Item 14",
         "price" : 0,
         "category" : "Furniture",
         "link" : "#item",
-        "image" : "src/images/0014.jpeg"
+        "image" : "/images/0014.jpeg"
     },
     {
         "name" : "Item 15",
         "price" : 0,
         "category" : "Furniture",
         "link" : "#item",
-        "image" : "src/images/0015.jpeg"
+        "image" : "/images/0015.jpeg"
     },
     {
         "name" : "Item 16",
         "price" : 0,
         "category" : "Furniture",
         "link" : "#item",
-        "image" : "src/images/0016.jpeg"
+        "image" : "/images/0016.jpeg"
     },
     {
         "name" : "Item 17",
         "price" : 0,
         "category" : "Furniture",
         "link" : "#item",
-        "image" : "src/images/0017.jpeg"
+        "image" : "/images/0017.jpeg"
     },
     {
         "name" : "Item 18",
         "price" : 0,
         "category" : "Furniture",
         "link" : "#item",
-        "image" : "src/images/0018.jpeg"
+        "image" : "/images/0018.jpeg"
     },
     {
         "name" : "Item 19",
         "price" : 0,
         "category" : "Furniture",
         "link" : "#item",
-        "image" : "src/images/0019.jpeg"
+        "image" : "/images/0019.jpeg"
     },
     {
         "name" : "Item 20",
         "price" : 0,
         "category" : "Furniture",
         "link" : "#item",
-        "image" : "src/images/0020.jpeg"
+        "image" : "/images/0020.jpeg"
     }
 ]
