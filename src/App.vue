@@ -41,7 +41,7 @@ const query = ref('')
 const cart = ref([])
 const search_results = ref([])
 const display_items = ref([])
-const url = `src/api/items.json`
+const url = `./items.json`
 
 var isSearching = false // is the user searching
 
