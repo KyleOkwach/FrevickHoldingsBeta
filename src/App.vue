@@ -1,5 +1,6 @@
 <script>
 import Navbar from './components/Navbar.vue'
+import Cart from './components/Cart.vue'
 import Hero from './components/Hero.vue'
 import Searchbar from './components/Searchbar.vue'
 import Footer from './components/Footer.vue'
@@ -11,7 +12,26 @@ export default {
     Navbar,
     Hero,
     Searchbar,
-    Footer
+    Footer,
+    Cart
+  },
+  setup() {
+    var cart = ref([])
+
+    return {
+      cartActive
+    }
+  },
+  methods: {
+    addToCart(item) {
+      this.cart.push(item)
+    },
+    scrollToElement(refName) {
+      const [el] = this.$refs.refName;
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    },
   }
 };
 </script>
@@ -47,56 +67,54 @@ const handleInput = e => {
 
 <template>
   <!-- NAVBAR -->
-  <div id="top"></div>
+  <div id="top" ref='top'></div>
 
-  <Navbar />
+  <!-- <Cart :myCart="cart" v-if="cartActive"/> -->
+
+  <Navbar :inCart="cart.length" :mCart="cart" />
+
+  <a href="https://wa.me/254711279221?text="
+    class="fixed right-3 bottom-3 z-20"
+  >
+    <i class="fa-brands fa-whatsapp text-5xl rounded-xl h-[48px] 
+      text-green-600 hover:text-green-400 hover:text-[3.5rem]
+       transition-all duration-500"
+    ></i>
+  </a>
 
   <Hero />
 
-  <Searchbar />
+  <!-- <Searchbar :val="query"/> -->
 
-  <br />
 
-  <div id="main">
-
+  <div id="main" ref="main">
+    
     <!-- DISPLAY -->
-    <h2 v-if="!isSearching" class="uppercase font-bold underline">Items of the day</h2>
     <div v-if="!isSearching"
       class="display 
-      grid grid-flow-cols grid-cols-3
+      grid grid-flow-cols sm:grid-cols-3
+      grid-cols-1
       gap-2 p-1"
     >
       <div v-for="(item, i) in display_items" :key="i"
         class="card rounded-md 
         text-left "
-        
       >
-        <div class="ovrflow-hidden">
+        <div class="" 
+          :class="{ 'hidden' : !item.name.toLowerCase().includes(query) }"
+          >
           <li class="card-content m-4 relative">
             <img :src="item.image" class="object-contain" />
             <h3 class="">{{ item.name }}</h3>
             <i class="text-green-600"><p>KSH {{ item.price }}</p></i>
-            <button class="bg-gray-700 p-2 rounded-md hover:bg-green-700 text-white transition-all duration 500"> Add to cart <i class="fa-solid fa-cart-plus"></i></button>
+            <button 
+              @click="addToCart(item)"
+              class="bg-gray-700 p-2 rounded-md hover:bg-green-700 text-white transition-all duration 500"> Add to cart <i class="fa-solid fa-cart-plus"></i></button>
             <!-- <font-awesome-icon icon="fa-solid fa-heart" /> -->
           </li>
         </div>
       </div>
 
-    </div>
-
-    <!-- SEARCH -->
-    <div v-if="isSearching"
-      class="results
-      grid grid-flow-cols grid-cols-3"
-    >
-      <div v-for="(item, i) in search_results" :key="i"
-        class="card"
-      >
-        <img :src="item.image" width="64" height="64" />
-        <div class="details">
-          <h3>{{ item.name }}</h3>
-        </div>
-      </div>
     </div>
 
   </div>

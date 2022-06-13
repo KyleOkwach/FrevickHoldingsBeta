@@ -1,13 +1,16 @@
 <script>
 import { ref } from 'vue'
 export default{
-    name: 'Searchbar'
+    name: 'Searchbar',
+    props: {
+        val: ''
+    }
 }
 </script>
 <template>
     <form @submit.prevent="searchItem" class="p-4">
-        <input type="text" placeholder="search for item..." v-model="query" @input="handleInput" 
-        class="h-8 border-[0.5px] border-slate-700 w-[30%]
+        <input type="text" placeholder="search for item..." v-model="val" @input="handleInput" 
+        class="h-8 border-[0.5px] border-slate-700 sm:w-[30%] w-[60%]
         rounded-tl-md rounded-bl-md"
         />
         <button type="submit"

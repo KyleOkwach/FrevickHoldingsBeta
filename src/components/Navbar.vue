@@ -1,27 +1,41 @@
 <script>
 import { ref } from 'vue'
+import Cart from './Cart.vue';
 
 
 export default{
-    name: 'Navbar',
-    props: {},
+    name: "Navbar",
     setup() {
-        let colorBg = ref(false)
-
-        document.addEventListener("scroll", function(){
-            let bodyTop = document.body.getBoundingClientRect().top
-
-            if (bodyTop < -150) {
-                colorBg.value = true
-            } else {
-                colorBg.value = false
+        let colorBg = ref(false);
+        document.addEventListener("scroll", function () {
+            let bodyTop = document.body.getBoundingClientRect().top;
+            if (bodyTop < -50) {
+                colorBg.value = true;
             }
-        })
+            else {
+                colorBg.value = false;
+            }
 
+        });
         return {
             colorBg
+        };
+    },
+    data() {
+        return {
+            displayCart: false
         }
-    }
+    },
+    props: {
+        inCart: 0,
+        mCart: []
+    },
+    methods: {
+        toggleCart() {
+            this.displayCart = !this.displayCart;
+        }
+    },
+    components: { Cart }
 }
 </script>
 
@@ -32,18 +46,26 @@ export default{
         transtion-color duration-300"
         :class="{ 'bg-transparent shadow-none h-16' : !colorBg }"
     >
-        <a href="">
-            <h1 class="text-3xl font-bold uppercase">
+        <a href="./">
+            <h1 class=" sm:text-3xl font-bold uppercase">
                 Frevick Holdings
             </h1>
         </a>
-        <ul class="flex gap-4">
-            <li class="hover:bg-white hover:shadow-sm hover:text-gray-900 p-1 rounded-[5px] transition-all duration-300"><a href="">Products</a></li>
-            <li class="hover:bg-white hover:shadow-sm hover:text-gray-900 p-1 rounded-[5px] transition-all duration-300"><a href="">FAQs</a></li>
-            <li class="hover:bg-white hover:shadow-sm hover:text-gray-900 p-1 rounded-[5px] transition-all duration-300"><a href="">Contacts</a></li>
-            <li class="hover:bg-white hover:shadow-sm hover:text-gray-900 p-1 rounded-[5px] transition-all duration-300"><a href=""><i class="fa-solid fa-cart-plus"></i></a></li>
+        <ul class="sm:flex gap-4">
+            <li class=" hover:text-gray-900 p-1 
+                flex transition-all duration-300
+                justify-center items-center
+            ">
+                <button @click="toggleCart">
+                    <i class="fa-solid fa-cart-arrow-down"></i>
+                    <sup v-if="inCart >= 1" class="relative right-1 bg-green-600 rounded-[100%] p-[1px] px-[4px]">{{ inCart }}</sup>
+                </button>
+            </li>
         </ul>
     </nav>
+
+    <Cart :myCart="mCart" v-if="displayCart" class="transition-all duration-500" />
+
 </template>
 
 <style>
