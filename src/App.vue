@@ -16,16 +16,11 @@ export default {
     Cart
   },
   setup() {
-    var cart = ref([])
-
     return {
       cartActive
     }
   },
   methods: {
-    addToCart(item) {
-      this.cart.push(item)
-    },
     scrollToElement(refName) {
       const [el] = this.$refs.refName;
       if (el) {
@@ -45,22 +40,12 @@ const url = `./items.json`
 
 var isSearching = false // is the user searching
 
-const searchItem = () => {
-  fetch(url)
-    .then(res => res.json())
-    .then(data => search_results.value = data)
-
-  isSearching = true
-}
-
 fetch(url)
   .then(res => res.json())
   .then(data => display_items.value = data)
 
-const handleInput = e => {
-  if (!e.target.value) {
-    search_results.value = []
-  }
+function addToCart(item) {
+      cart.value.push(item)
 }
 
 </script>

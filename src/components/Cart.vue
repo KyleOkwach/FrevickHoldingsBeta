@@ -4,7 +4,7 @@ import { ref } from "vue"
 export default({
     name: 'Cart',
     props: {
-        myCart: [],
+        myCart: {type: Array, required: false}
     },
     methods: {
         removeFromCart(product){

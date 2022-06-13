@@ -28,7 +28,7 @@ export default{
     },
     props: {
         inCart: 0,
-        mCart: []
+        mCart: {type: Array, required: false}
     },
     methods: {
         toggleCart() {
