@@ -58,7 +58,7 @@ function addToCart(item) {
 
   <Navbar :inCart="cart.length" :mCart="cart" />
 
-  <a href="https://wa.me/254711279221?text="
+  <a href="https://wa.me/254740651972?text="
     class="fixed right-3 bottom-3 z-20"
   >
     <i class="fa-brands fa-whatsapp text-5xl rounded-xl h-[48px] 
